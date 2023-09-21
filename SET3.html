@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Title</title>
+
+<style>
+* {
+margin: 0;
+padding: 0;
+}
+
+.circle {
+width: 50px; height: 50px;
+background-color: red; border-radius: 50%; margin: 50px; transform: scale(2);
+}
+
+#box2 {
+position: relative;
+}
+
+.arrow {
+height: 50px; width: 50px;
+border: 5px black solid; margin: 50px;
+border-bottom-color: transparent; border-left-color: transparent;
+ 
+transform: rotate(10deg);
+}
+
+.line {
+transform: rotate(50deg); top: 40px;
+left: 66px; position: absolute; width: 5px;
+height: 100px; background-color: black;
+}
+
+#box4, #box3 {
+height: 150px; width: 150px; margin: 50px;
+border: 1px solid black; position: relative;
+}
+
+.box {
+position: absolute; width: 50px; height: 50px; background: blue; right: 50px; bottom: 20px;
+}
+
+.square {
+position: absolute; width: 50px; height: 50px;
+ 
+background: green;
+animation: square 2s infinite ease-in-out;
+}
+
+.btn {
+margin: 50px; padding: 8px 15px; font-size: 20px; font-weight: bold; transition: all 0.5s;
+border: 1px solid black; cursor: pointer;
+}
+
+.btn:hover {
+transform: rotate(360deg);
+}
+
+#box6 {
+margin: 50px;
+}
+
+.flip-card { width: 100px;
+position: relative; transition: transform 0.8s;
+transform-style: preserve-3d;
+}
+
+.flip-card:hover {
+transform: rotateY(180deg);
+}
+
+.back,
+.front {
+ 
+height: 100px; width: 100px; background: black; color: white;
+text-align: center;
+}
+
+.back {
+position: absolute; top: 0;
+left: 0;
+
+}
+
+@keyframes square { 0% {
+top: 0; left: 0px;
+transform: scale(1);
+}
+
+25% {
+top: 0; right: 0px;
+transform: scale(1.5) ;
+}
+
+50% {
+right: 0px; bottom: 0;
+transform: scale(2) rotate(45deg);
+}
+
+75% {
+bottom: 0px;
+ 
+transform: scale(1.5) rotate(45deg);
+
+}
+}
+
+.nav-bar { height: 60px;
+background: black; color: white; padding: 0 50px;
+}
+
+.nav-bar label {
+line-height: 60px; font-size: 25px;
+}
+
+ul {
+float: right;
+list-style: none; line-height: 50px;
+}
+
+ 
+li {
+
+
+
+
+
+ 
+
+display: inline; padding: 20px; transition: all 0.5s; cursor: pointer;
+}
+
+li:hover { color: red;
+font-size: 22px;
+text-shadow: 2px 2px 8px #fff, 2px 2px 25px #fff,
+ 
+2px 2px 50px #fff, 2px 2px 70px #fff;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+}
+
+.btn:active {
+letter-spacing: 2px;
+}
+
+</style>
+</head>
+
+<body>
+<div id="box7">
+<div class="nav-bar">
+<label>LOGO HERE</label>
+<ul>
+<li>Home</li>
+<li>About</li>
+<li>Contact</li>
+</ul>
+</div>
+</div>
+<div class="grid">
+<div id="box1">
+<div class="circle"></div>
+</div>
+<div id="box2">
+<div class="arrow"></div>
+<div class="line"></div>
+</div>
+ 
+<div id="box4">
+<div class="box"></div>
+</div>
+
+<div id="box5">
+<button class="btn">Hover Me</button>
+</div>
+
+<div id="box6">
+<div class="flip-card">
+<div class="front"> flip-Card
+</div>
+
+<div class="back"> flip-Card
+</div>
+</div>
+</div>
+
+<div id="box3">
+<div class="square"></div>
+</div>
+</div>
+</body>
+</html>

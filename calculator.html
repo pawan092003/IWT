@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    #main{
+        display: grid;
+        background-color: aqua;
+        /* padding: 40px; */
+        overflow: hidden;
+        border-radius: 20px;
+       
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.566);
+        width: 600px;
+        height: 400px;
+        margin: auto;
+        grid-template-areas: 'a1 a1 a1 a1'
+                             'a2 a3 a4 a5'
+                             'a12 a13 a14 a19'
+                             'a9 a10 a11 a18'
+                             'a6 a7 a8 a18'
+                             'a15 a16 a17 a18' ;
+    }
+   
+
+
+
+    
+    #a1{
+        grid-area: a1;
+        background-color: black;
+        color: aliceblue;
+        text-align: right;
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+
+
+    #a2{
+        grid-area: a2;
+    }
+    #a3{
+        grid-area: a3;
+    }
+    #a4{
+        grid-area: a4;
+    }
+    #a5{
+        grid-area: a5;
+    }
+    #a6{
+        grid-area: a6;
+    }
+    #a7{
+        grid-area: a7;
+    }
+    #a8{
+        grid-area: a8;
+    }
+    #a9{
+        grid-area: a9;
+    }
+    #a10{
+        grid-area: a10;
+    }
+    #a11{
+        grid-area: a11;
+    }
+    #a12{
+        grid-area: a12;
+    }
+    #a13{
+        grid-area: a13;
+    }
+    #a14{
+        grid-area: a14;
+    }
+    #a15{
+        grid-area: a15;
+    }
+    #a16{
+        grid-area: a16;
+    }
+    #a17{
+        grid-area: a17;
+    }
+    #a19{
+        grid-area: a19;
+    }
+    #a18{
+        grid-area: a18;
+        background-color: orangered;
+    }
+    input[type=submit],
+    button{
+        font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+    <div id="main">
+        
+            <input id="a1" type="text">
+                
+            <input id="a2" type="submit" value="+" onclick="cals()">
+
+            <input  id="a3" type="submit" value="-" onclick="cals()">
+                
+            <input id="a4" type="submit" value="*" onclick="cals()">
+                
+            <input  id="a5" type="submit" value="/" onclick="cals()">
+
+            <input  id="a19" type="submit" value="^" onclick="cals()">
+                
+            <button value="1" id="a6" type="number" onclick="cals()">1</button>
+                
+            <button value="2" id="a7" type="number" onclick="cals()">2</button>
+                
+            <button value="3" id="a8" type="number" onclick="cals()">3</button>
+                
+            <button value="4" id="a9" type="number" onclick="cals()">4</button>
+                
+            <button value="5" id="a10" type="number" onclick="cals()">5</button>
+                
+            <button value="6" id="a11" type="number" onclick="cals()">6</button>
+                
+            <button value="7" id="a12" type="number" onclick="cals()">7</button>
+                
+            <button value="8" id="a13" type="number" onclick="cals()">8</button>
+                
+            <button value="9" id="a14" type="number" onclick="cals()">9</button>
+                
+            <button value="0" id="a15" type="number" onclick="cals()">0</button>
+                
+            <button value="." id="a16" type="number" onclick="cals()">.</button>
+                
+            <button value="ac" id="a17" type="number" onclick="cals()">AC</button>
+                
+            <button value="=" id="a18" type="number" onclick="cals()">=</button>
+        </div>
+    <script>
+       exp = '';
+            screen = document.getElementById("a1");
+            num1 = 0;
+            numStr = '';
+            currentOp = '';
+
+            function cals() {
+
+                current = event.target.value;
+
+                if(current == 'ac') {
+                    screen.value = "";
+                    numStr = '';
+                }
+
+                if(current == '.') {
+                
+
+                    if(numStr.includes('.')) {
+
+                    }
+                    else {
+                        numStr += '.';
+                        screen.value = numStr;
+                    }
+                }
+
+                if(current == '1' || current == '2' || current == '3' ||
+                   current == '4' || current == '5' || current == '6' ||
+                   current == '7' || current == '8' || current == '9' || current == '0') {
+
+                    numStr += current;
+                    screen.value = numStr;
+                }
+
+                if(current == '+' || current == '-' || current == '*' ||
+                   current == '/' || current == '^') {
+                    num1 = Number(numStr);
+                    currentOp = current;
+                    screen.value = '';
+                    numStr = '';
+                }
+
+                if(current == '=') {
+                    num2 = Number(screen.value);
+
+                    if(currentOp == '+') {
+                        result = num1 + num2;
+                        screen.value = result;
+                        numStr = result.toString();
+                    }
+                    if(currentOp == '-') {
+                        result = num1 - num2;
+                        screen.value = result;
+                        numStr = result.toString();
+                    }
+                    if(currentOp == '*') {
+                        result = num1 * num2;
+                        screen.value = result;
+                        numStr = result.toString();
+                    }
+                    if(currentOp == '/') {
+                        result = num1 / num2;
+                        screen.value = result;
+                        numStr = result.toString();
+                    }
+                    
+                    if(currentOp == '^') {
+                        result = power(num1, num2);
+                        screen.value = result;
+                        numStr = result.toString();
+                    }
+                }
+
+
+            }
+    
+            function power(n1, n2) {
+                var result = 1;
+                for(let i = 0; i < n2;i++) {
+                    result = result*n1;
+                }
+
+                return result;
+            }
+    </script>
+</body>
+</html>

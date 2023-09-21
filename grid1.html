@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    #lg{
+        display: grid;
+        grid-gap: 6px;
+        height: 300px;
+        width: 600px;
+        grid-template-areas: 'a a d d e f'
+                             'b c d d e g'
+                             'h i i j j k'
+        ;
+    }
+    .ab{
+        border: 1.5px solid palevioletred;
+        display: grid;
+        place-items: center;
+
+    }
+    #a{
+        grid-area: a;
+    }
+    #b{
+        grid-area: b;
+    }
+    #c{
+        grid-area: c;
+    }
+    #d{
+        grid-area: d;
+    }
+    #e{
+        grid-area: e;
+    }
+    #f{
+        grid-area: f;
+    }
+    #g{
+        grid-area: g;
+    }
+    #h{
+        grid-area: h;
+    }
+    #i{
+        grid-area: i;
+    }
+    #j{
+        grid-area: j;
+    }
+    #k{
+        grid-area: k;
+    }
+    </style>
+
+</head>
+<body>
+    <div id="lg">
+        <div class="ab" id="a">1</div>
+        <div class="ab" id="b">2</div>
+        <div class="ab" id="c">3</div>
+        <div class="ab" id="d">4</div>
+        <div class="ab" id="e">5</div>
+        <div class="ab" id="f">6</div>
+        <div class="ab" id="g">7</div>
+        <div class="ab" id="h">8</div>
+        <div class="ab" id="i">9</div>
+        <div class="ab" id="j">10</div>
+        <div class="ab" id="k">11</div>
+        
+        
+
+    </div>
+    
+</body>
+</html>

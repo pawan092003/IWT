@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    
+    #lg{
+        padding: 5px;
+        background-color: black;
+        display: grid;
+        grid-gap: 6px;
+        height: 650px;
+        grid-template-areas: 'a a a '
+        'd e f'
+        'g g g'
+                             
+        ;
+    }
+    .ab{
+        background-color: wheat;
+        border: 1.5px solid red;
+        display: grid;
+        place-items: center;
+        padding: 15px;
+      
+
+    }
+    #a{
+        grid-area: a;
+    }
+    /* #b{
+        grid-area: b;
+    }
+    #c{
+        grid-area: c;
+    } */
+    #d{
+        grid-area: d;
+    }
+    #e{
+        grid-area: e;
+    }
+    #f{
+        grid-area: f;
+    }
+    #g{
+        grid-area: g;
+    }
+    
+    @media only screen and  (max-width:600px) {
+        #lg{
+            grid-template-areas: 'a a a '
+            'd d d'
+            'e e e'
+            'f f f'
+            'g g g';  
+        }
+    }
+
+    /* @media only screen and (min-width: 501px) and (max-width:700px) {
+        #d{
+            display: block;
+           
+        }
+    }
+
+    @media only screen and (min-width: 701px) and (max-width:1000px) {
+        #e{
+            display: block;
+           
+        }
+    }
+
+    @media only screen and (min-width: 1001px) {
+        #f{
+            display: block;
+        
+        }
+    } */
+    img{
+        float: left;
+border: 1px solid black; margin: 0px 10px 10px 0;
+
+    }
+    </style>
+
+</head>
+<body>
+    <H1 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; text-align: center;">VIT-PAPER</H1>
+  
+    <div id="lg">
+
+        <div class="ab" id="a" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: bold;">
+            <img style="height: 300px; width: 400px;" src="newss.jpg">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio nisi eum adipisci? Animi sunt tempore labore unde iste optio. Labore temporibus autem incidunt sed? Velit placeat deserunt possimus ab quaerat!
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, numquam impedit. Explicabo totam quia sed sequi sint ab incidunt doloribus pariatur reiciendis porro, perspiciatis non veritatis laboriosam nam quisquam dolore!
+    </div>
+        <!-- <div class="ab" id="b">SIDEBAR</div> -->
+        <!-- <div class="ab" id="c">MAIN</div> -->
+        <div class="ab" id="d">CONTENT1</div>
+        <div class="ab" id="e">CONTENT2</div>
+        <div class="ab" id="f">CONTENT3</div>
+        <div class="ab" id="g">FOOTER</div>
+        
+        
+
+    </div>
+  
+</body>
+</html>

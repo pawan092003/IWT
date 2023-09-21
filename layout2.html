@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    #lg{
+        display: grid;
+        grid-gap: 3px;
+        height: 300px;
+        width: 600px;
+        grid-template-areas: 'a a a a'
+        'b c c c'
+        'b c c c'
+        'b c c c'
+        'b c c c'
+        'b d e f'
+        'b d e f'
+        'b d e f'
+        'b d e f'
+        'b g g g'
+        'b g g g'
+                             
+        ;
+    }
+    .ab{
+        border: 3px solid red;
+        display: grid;
+        place-items: center;
+
+    }
+    #a{
+        grid-area: a;
+    }
+    #b{
+        grid-area: b;
+    }
+    #c{
+        grid-area: c;
+    }
+    #d{
+        grid-area: d;
+    }
+    #e{
+        grid-area: e;
+    }
+    #f{
+        grid-area: f;
+    }
+    #g{
+        grid-area: g;
+    }
+
+    </style>
+
+</head>
+<body>
+    <div id="lg">
+        <div class="ab" id="a">NAVBAR</div>
+        <div class="ab" id="b">SIDEBAR</div>
+        <div class="ab" id="c">MAIN</div>
+        <div class="ab" id="d">CONTENT1</div>
+        <div class="ab" id="e">CONTENT2</div>
+        <div class="ab" id="f">CONTENT3</div>
+        <div class="ab" id="g">FOOTER</div>
+        
+        
+
+    </div>
+    
+</body>
+</html>
